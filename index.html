@@ -1,97 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahsan Ali Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahsan Ali | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#1e3a8a;
+    color:white;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+    background-size:cover;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:55px;
+}
+
+.hero-content span{
+    color:#60a5fa;
+}
+
+.hero-content p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+section{
+    padding:70px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:40px;
+    color:#1e3a8a;
+}
+
+.about{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:280px;
+    border-radius:50%;
+}
+
+.about-text{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.skill-box{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-card h3{
+    padding:15px;
+}
+
+.project-card p{
+    padding:0 15px 20px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px;
+    font-size:18px;
+}
+
+footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Ahsan Ali</h1>
-        <p>BS Computer Science Student | Web Developer | Learner</p>
-        <hr>
-    </header>
+<header>
+    <div class="logo">Ahsan Ali</div>
 
-    <!-- About Me Section -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            My name is Ahsan Ali. I am a First Semester student of
-            BS Computer Science (BSCS20261017) at Al-Kawther University Karachi.
-            I am passionate about web development, programming, and technology.
-            I enjoy learning new skills and building creative websites.
-        </p>
-    </section>
-
-    <hr>
-
-    <!-- Projects Section -->
-    <section>
-        <h2>My Projects</h2>
-
-        <h3>Project 1: Travel Blog Website</h3>
-        <p>A simple travel blog website designed using HTML.</p>
-
-        <h3>Project 2: Student Registration Form</h3>
-        <p>An HTML form for student registration with validation fields.</p>
-
-        <h3>Project 3: Personal Portfolio Website</h3>
-        <p>A portfolio website showcasing my skills, projects, and contact information.</p>
-    </section>
-
-    <hr>
-
-    <!-- Skills Section -->
-    <section>
-        <h2>Skills</h2>
+    <nav>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Bootstrap</li>
-            <li>Basic JavaScript</li>
-            <li>MS Word</li>
-            <li>MS Excel</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+    </nav>
+</header>
 
-    <hr>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hello, I'm <span>Ahsan Ali</span></h1>
+        <p>BSCS Student | Front-End Developer | Web Designer</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
 
-    <!-- Education Section -->
-    <section>
-        <h2>Education</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>Degree</th>
-                <th>Institute</th>
-                <th>Year</th>
-            </tr>
-            <tr>
-                <td>BS Computer Science</td>
-                <td>Al-Kawther University Karachi</td>
-                <td>2026 - Present</td>
-            </tr>
-        </table>
-    </section>
+<section id="about">
+    <h2 class="section-title">About Me</h2>
 
-    <hr>
+    <div class="about">
+        <img src="https://via.placeholder.com/300" alt="Profile">
 
-    <!-- Contact Section -->
-    <section>
-        <h2>Contact Me</h2>
+        <div class="about-text">
+            <p>
+                My name is Ahsan Ali. I am a student of BS Computer Science
+                (BSCS20261017) at Al-Kawther University Karachi.
+                I am passionate about Web Development, Programming,
+                and Modern Technology.
+            </p>
+
+            <p>
+                My goal is to become a professional software engineer and
+                create innovative digital solutions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills">
+        <div class="skill-box">
+            <h3>HTML5</h3>
+        </div>
+
+        <div class="skill-box">
+            <h3>CSS3</h3>
+        </div>
+
+        <div class="skill-box">
+            <h3>Bootstrap 5</h3>
+        </div>
+
+        <div class="skill-box">
+            <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill-box">
+            <h3>MS Word</h3>
+        </div>
+
+        <div class="skill-box">
+            <h3>MS Excel</h3>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="">
+            <h3>Travel Blog Website</h3>
+            <p>A responsive travel blog website developed using HTML and CSS.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="">
+            <h3>Student Registration Form</h3>
+            <p>A modern registration form with professional design.</p>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio website showcasing skills and projects.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact">
         <p><strong>Name:</strong> Ahsan Ali</p>
+        <p><strong>Department:</strong> BSCS20261017</p>
+        <p><strong>University:</strong> Al-Kawther University Karachi</p>
         <p><strong>Email:</strong> ahsanali@example.com</p>
         <p><strong>Phone:</strong> +92 300 1234567</p>
-        <p><strong>Location:</strong> Karachi, Pakistan</p>
-    </section>
+    </div>
+</section>
 
-    <hr>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 Ahsan Ali. All Rights Reserved.</p>
-    </footer>
+<footer>
+    <p>© 2026 Ahsan Ali | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
